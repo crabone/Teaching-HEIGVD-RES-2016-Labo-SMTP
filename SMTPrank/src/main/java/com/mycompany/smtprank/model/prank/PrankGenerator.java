@@ -22,7 +22,7 @@ public class PrankGenerator {
             throw new NullPointerException();
         }
         else {
-            int totalVictims = victims.size(); //Attention nullPOinterException
+            int totalVictims = victims.size();
             int minGroupSize = totalVictims / numberOfGroups;
 
             if (numberOfGroups < 1) {
