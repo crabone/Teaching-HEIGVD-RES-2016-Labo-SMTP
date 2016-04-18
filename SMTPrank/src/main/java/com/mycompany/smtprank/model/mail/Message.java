@@ -22,6 +22,26 @@ public class Message {
         bcc = new ArrayList<>();
     }
     
+    public Message(String from, List<String> to, List<String> cc, String subject, String content) {
+        this();
+        this.from = from;
+        this.to.addAll(to);
+        this.cc.addAll(cc);
+        this.subject = subject;
+        this.content = content;
+    }
+    
+    public void addAllTo(List<String> addresses) {
+        to.addAll(addresses);
+    }
+    
+    public void addAllCc(List<String> addresses) {
+        cc.addAll(addresses);
+    }
+    public void addAllBcc(List<String> addresses) {
+        bcc.addAll(addresses);
+    }
+    
     public void addTo(String address) {
         to.add(address);
     }
