@@ -1,5 +1,6 @@
 package com.mycompany.smtprank.model.prank;
 
+import com.mycompany.smtprank.model.mail.Message;
 import com.mycompany.smtprank.model.mail.Person;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +13,13 @@ public class Prank {
     private Person author;
     private List<Person> victims;
     private String subject;
-    private String message;
+    private String content;
 
-    public Prank(Person author, List<Person> victims, String subject, String message) {
+    public Prank(Person author, List<Person> victims, String subject, String content) {
         this.author = author;
         this.victims = victims;
         this.subject = subject;
-        this.message = message;
+        this.content = content;
     }
     
     public void addAllVictims(List<Person> persons) {
@@ -41,8 +42,8 @@ public class Prank {
         return subject;
     }
 
-    public String getMessage() {
-        return message;
+    public String getContent() {
+        return content;
     }
 
     public void setAuthor(Person author) {
@@ -53,7 +54,22 @@ public class Prank {
         this.subject = subject;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setContent(String content) {
+        this.content = content;
+    }
+    
+    public Message generateMessage() {
+        Message message = new Message();
+        
+        message.setFrom(author.getAddress());
+        
+        for (Person victim : victims) {
+            message.addTo(victim.getAddress());
+        }
+        
+        message.setSubject(subject);
+        message.setContent(content + "\r\n" + author.getFirstname());
+        
+        return message;
     }
 }
