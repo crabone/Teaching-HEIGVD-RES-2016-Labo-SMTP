@@ -1,5 +1,6 @@
 package com.mycompany.smtprank.transformers;
 
+import com.mycompany.smtprank.filters.CRLFFilterWriter;
 import java.io.Writer;
 
 /**
@@ -10,7 +11,8 @@ public class EndLineStringTransformer extends StringTransformer {
 
     @Override
     public Writer decorateWithFilters(Writer writer) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        writer = new CRLFFilterWriter(writer);
+        return writer;
     }
     
 }
