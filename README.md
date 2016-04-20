@@ -21,5 +21,5 @@ SMTPrank est configurable par des fichiers situés dans /path/to/install/dir/con
 
 ## Aspects techniques
 ### Diagramme de classe
-![Diagramme de classe](https://github.com/crabone/Teaching-HEIGVD-RES-2016-Labo-SMTP/blob/master/figures/diagramme-de-classe.png)
+![Diagrame de classe](https://github.com/crabone/Teaching-HEIGVD-RES-2016-Labo-SMTP/blob/master/figures/diagrame-de-classe.png)
 
