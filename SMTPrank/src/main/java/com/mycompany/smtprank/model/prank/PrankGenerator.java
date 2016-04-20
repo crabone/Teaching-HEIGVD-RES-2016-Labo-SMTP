@@ -70,7 +70,7 @@ public class PrankGenerator {
         }
     }
     
-    public Prank generatePrank(Group group, String rawPranks) {
+    public Prank generatePrank(Group group, String rawPrank) {
         Person sender;
         List<Person> victims;
         Prank prank;
@@ -83,7 +83,7 @@ public class PrankGenerator {
         Le contenu d'une plaisanterie est découpée en 2 sections distinctes, la première (sur une ligne)
         représente le sujet, et la seconde représente le contenu.
         */
-        content = Utils.getNextLine(rawPranks);
+        content = Utils.getNextLine(rawPrank);
         
         /*
         On désire prendre le sujet du message sans le préfixe "Subject: ".
