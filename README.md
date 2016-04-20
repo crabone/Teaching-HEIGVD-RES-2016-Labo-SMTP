@@ -15,7 +15,8 @@ Comme il n'est pas possible de se connecter directement auprès d'un serveur SMT
 Note: Il est conseillé de mapper MockMock sur le port 2525. Sur certains systèmes d'exploitations (tel que GNU/Linux) il est nescessaire de bénéficier des droits administrateurs pour mapper MockMock sur le port 25.
 
 ### SMTPrank
-A défaut d'executable, il est nescessaire de compiler l'application et de le lancé depuis un IDE (ici Netbeans)
+A défaut d'executable, il est nescessaire de compiler l'application et de le lancé depuis un IDE (ici Netbeans).
+
 1. Cloner le repository
 2. Ouvrir le projet
 3. Compiler et exécuter
