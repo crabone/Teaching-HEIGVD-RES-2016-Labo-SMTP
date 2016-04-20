@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Classe modélisant un groupe de personnes.
+ * 
  * @author crab_one
  */
 public class Group {

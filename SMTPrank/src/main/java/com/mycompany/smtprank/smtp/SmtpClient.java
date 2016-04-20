@@ -12,7 +12,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Cette classe implémente un client minimal SMTP. Il permet
+ * nottament d'envoyer un message text brut.
+ * 
  * @author crab_one
  */
 public class SmtpClient implements ISmtpClient {

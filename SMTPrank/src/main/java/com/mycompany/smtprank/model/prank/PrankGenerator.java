@@ -13,7 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Classe permettant la génération de plaisanteries et de groupes.
+ * 
  * @author crab_one
  */
 public class PrankGenerator {

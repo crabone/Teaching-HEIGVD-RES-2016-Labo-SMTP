@@ -6,7 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Classe modélisant une plaisanterie.
+ * 
  * @author crab_one
  */
 public class Prank {

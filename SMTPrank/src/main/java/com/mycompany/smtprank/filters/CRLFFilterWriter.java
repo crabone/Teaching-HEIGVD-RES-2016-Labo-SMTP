@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.io.Writer;
 
 /**
- *
+ * Cette classe permet de convertir tout les retours à la ligne
+ * d'un writer en CRLF.
+ * 
  * @author crab_one
  */
 public class CRLFFilterWriter extends FilterWriter {

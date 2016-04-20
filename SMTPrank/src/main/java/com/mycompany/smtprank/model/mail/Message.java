@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Classe modélisant un message destiné à être envoyé.
+ * 
  * @author crab_one
  */
 public class Message {

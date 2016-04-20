@@ -1,7 +1,8 @@
 package com.mycompany.smtprank.model.mail;
 
 /**
- *
+ * Classe modélisant une personne de manière très succinte.
+ * 
  * @author crab_one
  */
 public class Person {

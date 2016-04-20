@@ -14,7 +14,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * Classe permettant la configuration de l'application SMTPrank.
+ * 
  * @author crab_one
  */
 public class ConfigurationManager implements IConfigurationManager {

@@ -1,7 +1,9 @@
 package com.mycompany.smtprank.smtp;
 
 /**
- *
+ * Cette classe contient les commandes licites du
+ * protocole SMTP.
+ * 
  * @author crab_one
  */
 public class SmtpProtocol {
