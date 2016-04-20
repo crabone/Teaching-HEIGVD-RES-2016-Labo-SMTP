@@ -86,20 +86,22 @@ public class SmtpClient implements ISmtpClient {
     
     @Override
     public void sendMessage(Message message) throws IOException {
-        writer.write(SmtpProtocol.CMD_MAIL + " FROM:<" + message.getFrom() + ">" + SmtpProtocol.CRLF);
+        writer.write(SmtpProtocol.CMD_MAIL + " FROM:" + message.getFrom() + SmtpProtocol.CRLF);
         writer.flush();
         LOG.info(reader.readLine());
         
         for (String to : message.getTo()) {
-            writer.write(SmtpProtocol.CMD_RCPT + " TO:<" + to + ">" + SmtpProtocol.CRLF);
+            writer.write(SmtpProtocol.CMD_RCPT + " TO:" + to + SmtpProtocol.CRLF);
             writer.flush();
             LOG.info(reader.readLine());
         }
         
-        for (String cc : message.getCc()) {
-            writer.write(SmtpProtocol.CMD_RCPT + " CC:<" + cc + ">" + SmtpProtocol.CRLF);
-            writer.flush();
-            LOG.info(reader.readLine());
+        if (!message.getCc().isEmpty()) {
+            for (String cc : message.getCc()) {
+                writer.write(SmtpProtocol.CMD_RCPT + " CC:" + cc + SmtpProtocol.CRLF);
+                writer.flush();
+                LOG.info(reader.readLine());
+            }
         }
         
         writer.write(SmtpProtocol.CMD_DATA + SmtpProtocol.CRLF);
