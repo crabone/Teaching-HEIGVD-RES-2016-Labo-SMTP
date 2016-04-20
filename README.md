@@ -16,3 +16,6 @@ Note: Il est conseillé de mapper MockMock sur le port 2525. Sur certains systè
 
 ### SMTPrank
 
+## Configuration
+SMTPrank est configurable par des fichiers situés dans /path/to/install/dir/config/*
+
